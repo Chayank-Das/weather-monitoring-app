@@ -1,0 +1,255 @@
+/* frontend/style.css */
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #222;
+}
+
+.card {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    padding: 40px 35px;
+    text-align: center;
+}
+
+.weather-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.weather-card {
+    background: linear-gradient(135deg, #00feba, #5b548a);
+    color: #fff;
+    width: 30%;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.weather-icon {
+    width: 100px;
+    margin-top: 20px;
+}
+
+.weather h1 {
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.weather h3 {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+.details p {
+    margin: 5px;
+}
+
+.weather {
+    display: none;
+}
+
+.loading {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.temperature-toggle, .threshold-container {
+    margin: 20px 0;
+}
+
+.toggle-button {
+    background-color: #00feba;
+    color: #222;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.toggle-button:hover {
+    background-color: #5b548a;
+    transform: scale(1.05);
+}
+
+.threshold-container input {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.threshold-container button {
+    padding: 10px 15px;
+    margin-left: 10px;
+    background-color: #00feba;
+    color: #222;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.threshold-container button:hover {
+    background-color: #5b548a;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .weather-card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 480px) {
+    .weather-card {
+        width: 100%;
+    }
+}
+
+/* Styles for Alerts Container */
+.alerts-container {
+    width: 90%;
+    max-width: 1200px;
+    background: linear-gradient(135deg, #ff7f50, #ff6347);
+    color: #fff;
+    margin: 20px auto;
+    border-radius: 20px;
+    padding: 20px 35px;
+    text-align: left;
+}
+
+.alert-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 10px 0;
+}
+
+.alert-item:last-child {
+    border: none;
+}
+
+.alert-item h3 {
+    margin: 0 0 5px;
+}
+
+.alert-item p {
+    margin: 0;
+}
+
+.clear-btn {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.clear-btn button {
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.clear-btn button:hover {
+    background-color: #ff4500;
+}
+
+/* Styles for Forecast Container */
+.summary-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.forecast-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.city-forecast {
+    background: linear-gradient(135deg, #00feba, #5b548a);
+    color: #fff;
+    margin: 10px 0;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.city-forecast h3 {
+    margin-bottom: 10px;
+}
+
+.forecast-cards-container {
+    display: flex;
+    overflow-x: auto;
+}
+
+.forecast-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    min-width: 120px;
+    text-align: center;
+}
+
+.forecast-card img {
+    width: 50px;
+    height: 50px;
+}
+
+.forecast-card p {
+    margin: 5px 0;
+}
+
+/* Styles for Daily Summary Container */
+.daily-summary-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.summary-item {
+    background: linear-gradient(135deg, #5b548a, #00feba);
+    color: #fff;
+    width: 30%;
+    margin: 10px 0;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.summary-item h3 {
+    margin-bottom: 10px;
+}
+
+.summary-item p {
+    margin: 5px 0;
+}

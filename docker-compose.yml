@@ -1,0 +1,51 @@
+# docker-compose.yml
+
+
+services:
+  mongo:
+    image: mongo:6.0
+    container_name: weather_mongo
+    restart: always
+    environment:
+      MONGO_INITDB_DATABASE: daily_Weather_summary
+    volumes:
+      - mongo-data:/data/db
+    ports:
+      - "27017:27017"
+
+  backend:
+    build:
+      context: ./backend
+    container_name: weather_backend
+    restart: always
+    environment:
+      PORT: 3000
+      MONGODB_URI: mongodb://mongo:27017/daily_Weather_summary
+      API_KEY: your_openweathermap_api_key
+      FRONTEND_URL: http://localhost:8080
+    depends_on:
+      - mongo
+    ports:
+      - "3000:3000"
+    networks:
+      - weather-network
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: weather_frontend
+    restart: always
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+    networks:
+      - weather-network
+
+volumes:
+  mongo-data:
+    driver: local
+
+networks:
+  weather-network:
+    driver: bridge

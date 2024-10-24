@@ -1,0 +1,181 @@
+<!-- frontend/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for responsiveness and character encoding -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Monitoring App</title>
+    <!-- Link to the external stylesheet -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="card">
+        <!-- Temperature Unit Toggle -->
+        <div class="temperature-toggle">
+            <button id="unit-toggle" class="toggle-button">Switch to Kelvin</button>
+        </div>
+
+        <!-- Temperature Threshold Input -->
+        <div class="threshold-container">
+            <input type="number" id="temperature-threshold" placeholder="Set Temperature Threshold (°C)" min="0">
+            <button id="set-threshold">Set Threshold</button>
+        </div>
+
+        <!-- Weather Updates Heading -->
+        <h2>Weather Updates</h2>
+
+        <!-- Weather Cards Container -->
+        <div class="weather-container">
+            <!-- Weather Card for each city -->
+            <!-- Bengaluru -->
+            <div class="weather-card" id="bengaluru">
+                <h3>Bengaluru</h3>
+                <div class="weather">
+                    <img class="weather-icon" alt="Weather Icon">
+                    <h1 class="temp"></h1>
+                    <h3 class="condition"></h3>
+                    <br>
+                    <h3 class="feels-like"></h3>
+                    <br>
+                    <h3 class="update-time"></h3>
+                    <br>
+                    <div class="details">
+                        <p>Humidity:</p>
+                        <p class="humidity"></p>
+                        <p>Wind Speed:</p>
+                        <p class="wind"></p>
+                    </div>
+                </div>
+            </div>
+            <!-- Delhi -->
+            <div class="weather-card" id="delhi">
+                <h3>Delhi</h3>
+                <div class="weather">
+                    <img class="weather-icon" alt="Weather Icon">
+                    <h1 class="temp"></h1>
+                    <h3 class="condition"></h3>
+                    <br>
+                    <h3 class="feels-like"></h3>
+                    <br>
+                    <h3 class="update-time"></h3>
+                    <br>
+                    <div class="details">
+                        <p>Humidity:</p>
+                        <p class="humidity"></p>
+                        <p>Wind Speed:</p>
+                        <p class="wind"></p>
+                    </div>
+                </div>
+            </div>
+            <!-- Mumbai -->
+            <div class="weather-card" id="mumbai">
+                <h3>Mumbai</h3>
+                <div class="weather">
+                    <img class="weather-icon" alt="Weather Icon">
+                    <h1 class="temp"></h1>
+                    <h3 class="condition"></h3>
+                    <br>
+                    <h3 class="feels-like"></h3>
+                    <br>
+                    <h3 class="update-time"></h3>
+                    <br>
+                    <div class="details">
+                        <p>Humidity:</p>
+                        <p class="humidity"></p>
+                        <p>Wind Speed:</p>
+                        <p class="wind"></p>
+                    </div>
+                </div>
+            </div>
+            <!-- Chennai -->
+            <div class="weather-card" id="chennai">
+                <h3>Chennai</h3>
+                <div class="weather">
+                    <img class="weather-icon" alt="Weather Icon">
+                    <h1 class="temp"></h1>
+                    <h3 class="condition"></h3>
+                    <br>
+                    <h3 class="feels-like"></h3>
+                    <br>
+                    <h3 class="update-time"></h3>
+                    <br>
+                    <div class="details">
+                        <p>Humidity:</p>
+                        <p class="humidity"></p>
+                        <p>Wind Speed:</p>
+                        <p class="wind"></p>
+                    </div>
+                </div>
+            </div>
+            <!-- Kolkata -->
+            <div class="weather-card" id="kolkata">
+                <h3>Kolkata</h3>
+                <div class="weather">
+                    <img class="weather-icon" alt="Weather Icon">
+                    <h1 class="temp"></h1>
+                    <h3 class="condition"></h3>
+                    <br>
+                    <h3 class="feels-like"></h3>
+                    <br>
+                    <h3 class="update-time"></h3>
+                    <br>
+                    <div class="details">
+                        <p>Humidity:</p>
+                        <p class="humidity"></p>
+                        <p>Wind Speed:</p>
+                        <p class="wind"></p>
+                    </div>
+                </div>
+            </div>
+            <!-- Hyderabad -->
+            <div class="weather-card" id="hyderabad">
+                <h3>Hyderabad</h3>
+                <div class="weather">
+                    <img class="weather-icon" alt="Weather Icon">
+                    <h1 class="temp"></h1>
+                    <h3 class="condition"></h3>
+                    <br>
+                    <h3 class="feels-like"></h3>
+                    <br>
+                    <h3 class="update-time"></h3>
+                    <br>
+                    <div class="details">
+                        <p>Humidity:</p>
+                        <p class="humidity"></p>
+                        <p>Wind Speed:</p>
+                        <p class="wind"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="loading" style="display:none;">Loading...</div>
+
+        <!-- Alerts Container -->
+        <div class="alerts-container">
+            <h2>Alerts</h2>
+            <div id="alertsList"></div>
+            <div class="clear-btn">
+                <button id="clear-alerts" class="toggle-button">Clear Alerts</button>
+            </div>
+        </div>
+
+        <!-- Summary Container -->
+        <div class="summary-container">
+            <h2>Daily Weather Summaries</h2>
+            <div class="daily-summary-container">
+                <!-- Daily summaries will be appended here -->
+            </div>
+
+            <h2>5-Day Weather Forecasts</h2>
+            <div class="forecast-container">
+                <!-- Forecast Cards will be appended here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
