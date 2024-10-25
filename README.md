@@ -38,7 +38,7 @@ You can set up and run the Weather Monitoring App either using Docker or running
 
 #### Step 1: Clone the Repository
 ```sh
-$ git clone https://github.com/your-username/weather-monitoring-app.git
+$ git clone https://github.com/Chayank-Das/weather-monitoring-app.git
 $ cd weather-monitoring-app
 ```
 
@@ -47,14 +47,14 @@ $ cd weather-monitoring-app
    ```sh
    $ cd backend
    ```
-2. **Open `server.js` in Your Preferred Text Editor**
+2. **Open `server.js` and `script.js` in Your Preferred Text Editor**
    - Replace the hardcoded MongoDB URI and API key with your credentials:
      ```js
      const uri = "mongodb://your-mongodb-uri:27017/daily_Weather_summary";
      const apiKey = "your_actual_openweathermap_api_key";
      ```
-     const uri - Search in backend/server.js
-     const apiKey - Search in frontend/script.js
+     - **const uri - Search in backend/server.js**
+     - **const apiKey - Search in frontend/script.js**
      
 
 #### Step 3: Build and Run Containers
@@ -72,7 +72,7 @@ This will build the Docker images and start the containers for MongoDB, backend,
 
 #### Step 1: Clone the Repository
 ```sh
-$ git clone https://github.com/your-username/weather-monitoring-app.git
+$ git clone https://github.com/Chayank-Das/weather-monitoring-app.git
 $ cd weather-monitoring-app
 ```
 
@@ -86,13 +86,13 @@ $ cd weather-monitoring-app
    $ npm install
    ```
 3. **Update Credentials**
-   - Open `server.js` and replace the hardcoded values for MongoDB URI and API key.
+   - Open `server.js` and `script.js` and replace the hardcoded values for MongoDB URI and API key.
    ```js
    const uri = "mongodb://localhost:27017/daily_Weather_summary";
    const apiKey = "your_actual_openweathermap_api_key";
    ```
-   const uri - Search in backend/server.js
-   const apiKey - Search in frontend/script.js
+    - **const uri - Search in backend/server.js**
+    - **const apiKey - Search in frontend/script.js**
    
 5. **Start the Backend Server**
    ```sh
@@ -135,7 +135,7 @@ $ cd weather-monitoring-app
 1. **Fork the Repository**
 2. **Clone Your Fork**
    ```sh
-   $ git clone https://github.com/your-username/weather-monitoring-app.git
+   $ git clone https://github.com/Chayank-Das/weather-monitoring-app.git
    $ cd weather-monitoring-app
    ```
 3. **Create a New Branch**
