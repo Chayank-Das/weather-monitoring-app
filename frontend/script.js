@@ -413,4 +413,4 @@ function clearAlerts() {
 }
 
 // Set interval to fetch weather data every 5 minutes (300,000 milliseconds)
-setInterval(fetchAllWeather, 60000);
+setInterval(fetchAllWeather, 300000);
