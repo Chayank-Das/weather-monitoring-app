@@ -35,7 +35,7 @@ app.use(bodyParser.json());
 mongoose.set('debug', true);
 
 // Connect to MongoDB
-const uri = "mongodb+srv://chayank:Amazing@cluster0.2iw7v.mongodb.net/daily_Weather_summary?retryWrites=true&w=majority";
+const uri = "mongodb+srv://<username>:<password>@cluster0.2iw7v.mongodb.net/<Database Name>?retryWrites=true&w=majority";
 mongoose.connect(uri, {
     useNewUrlParser: true,
     useUnifiedTopology: true
